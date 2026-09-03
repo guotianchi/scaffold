@@ -1,0 +1,42 @@
+# .spec-superflow.yaml — lightweight state machine
+# Derived data. Always rebuildable from artifacts. Lost/corrupt → fall back to content-level detection.
+
+# === Core state ===
+state: executing
+workflow: full
+
+# === Hashes (fast staleness detection) ===
+artifacts_hash: sha256:0ccc68fc2aba0259d686a86512cc1572a2d52f262b297c97d68b30bee229b666
+contract_hash: sha256:84cf607569b0ce6f87123b863a7199cec40e5e1a0fad9a0ed36013f10e91727f
+
+# === Execution progress ===
+execution_mode: batch-inline
+batches_completed: 4
+test_result: pass: HelloControllerTest+ScaffoldContractTest and mvn -pl app -am package succeeded without MySQL
+spec_merged: false
+
+# === Metadata ===
+change_name: create-springboot-scaffold
+last_transition: 2026-09-03T02:33:18.757Z
+last_transition_from: approved-for-build
+last_transition_to: executing
+
+# === Decision points ===
+dp_0_decisions: change=create-springboot-scaffold; intent=新建 Spring Boot 2.7 + JDK 17 多模块脚手架；constraints=SB 2.7.18 + JDK 17 + Maven parent/core/app + groupId ai.openbuy + MyBatis-Plus + MySQL 占位 + GET /hello；out=JPA/鉴权/配置中心/Gradle/SB3；communication=每个关键决策先问
+dp_0_result: confirmed
+dp_0_confirmed: true
+dp_0_timestamp: 2026-09-03T02:21:40Z
+dp_1_result: confirmed: Maven parent+core+app; JDK17; SB 2.7.18; coords ai.openbuy; web GET /hello; MyBatis-Plus + MySQL placeholder; no JPA
+dp_1_timestamp: 2026-09-03T02:26:28Z
+dp_2_result: approved: parent+core+app scaffold JDK17 SB2.7.18 ai.openbuy hello MyBatis-Plus MySQL placeholders
+dp_2_timestamp: 2026-09-03T02:31:11Z
+dp_3_result: approved: 4-batch parent/core/app hello plus mysql placeholders, package without live mysql
+dp_3_timestamp: 2026-09-03T02:32:49Z
+dp_4_result: Batch Inline: 4 sequential greenfield batches, current session TDD, lower overhead than SDD
+dp_4_timestamp: 2026-09-03T02:33:18Z
+dp_5_result: null
+dp_5_timestamp: null
+dp_6_result: null
+dp_6_timestamp: null
+dp_7_result: null
+dp_7_timestamp: null

@@ -1,0 +1,8 @@
+{
+  "hooks": [
+    {
+      "event": "sessionStart",
+      "command": "bash /Users/guotianchi/Documents/project/springboot-scaffold/.cursor/spec-superflow/hooks/session-start"
+    }
+  ]
+}

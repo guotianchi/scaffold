@@ -1,0 +1,21 @@
+---
+description: spec-superflow phase guard
+alwaysApply: true
+---
+
+# Phase Guard: create-springboot-scaffold
+
+**当前阶段**: executing | **工作流**: full
+
+## ✅ 允许操作
+- 按 execution-contract.md 执行任务
+- 运行测试
+- 提交代码（按 batch 提交）
+
+## ⛔ 禁止操作
+- 修改 proposal.md, specs/, design.md（需先回退到 specifying）
+- 修改 execution-contract.md（需先回退到 bridging）
+- 跳过测试步骤
+
+## 🔔 决策点
+- DP-5: 调试升级 — 3+ 修复失败后需用户决定
