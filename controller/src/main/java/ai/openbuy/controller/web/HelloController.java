@@ -18,6 +18,11 @@ public class HelloController {
         return helloService.hello();
     }
 
+    /**
+     * 用于验证 PR 流程的占位方法。
+     *
+     * @return 固定测试字符串 {@code "testPr"}
+     */
     public String testPr() {
         return "testPr";
     }
