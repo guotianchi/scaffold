@@ -18,8 +18,10 @@
     <name>springboot-scaffold</name>
 
     <modules>
-        <module>core</module>
-        <module>app</module>
+        <module>common</module>
+        <module>service</module>
+        <module>dao</module>
+        <module>controller</module>
     </modules>
 
     <properties>
@@ -31,7 +33,22 @@
         <dependencies>
             <dependency>
                 <groupId>ai.openbuy</groupId>
-                <artifactId>core</artifactId>
+                <artifactId>common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ai.openbuy</groupId>
+                <artifactId>service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ai.openbuy</groupId>
+                <artifactId>dao</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ai.openbuy</groupId>
+                <artifactId>controller</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

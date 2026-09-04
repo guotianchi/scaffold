@@ -1,0 +1,42 @@
+# .spec-superflow.yaml — lightweight state machine
+# Derived data. Always rebuildable from artifacts. Lost/corrupt → fall back to content-level detection.
+
+# === Core state ===
+state: exploring
+workflow: full
+
+# === Hashes (fast staleness detection) ===
+artifacts_hash: sha256:66a97ccd7862351c3cda5bef53803332826ba953bf9a3d979bd55f7e42cc65f8
+contract_hash: sha256:c1f9743787bac9adf045b4e8695e3e5d2036658fca9125bb916664169f4a1be3
+
+# === Execution progress ===
+execution_mode: Batch Inline
+batches_completed: 5
+test_result: pass
+spec_merged: false
+
+# === Metadata ===
+change_name: split-layered-modules
+last_transition: 2026-09-04T03:23:51.568Z
+last_transition_from: null
+last_transition_to: null
+
+# === Decision points ===
+dp_0_decisions: 变更 split-layered-modules：在 main 分支删除 core/app，重建 common/service/dao/controller 四层；保留 GET /hello 与 MyBatis-Plus+MySQL 占位；清理磁盘残留重建；废弃 create-springboot-scaffold；不新建 git 分支
+dp_0_result: confirmed
+dp_0_confirmed: true
+dp_0_timestamp: 2026-09-04T03:26:18Z
+dp_1_result: confirmed: main 分支 core+app 重构为 common/service/dao/controller 四层，严格依赖链，保留 hello+MyBatis 占位，不含 JWT/Auth，废弃 create-springboot-scaffold
+dp_1_timestamp: 2026-09-04T03:27:47Z
+dp_2_result: approved: 四模块分层重构 proposal/spec/design/tasks 已确认，含清理 JWT 残留与 strict dependency chain
+dp_2_timestamp: 2026-09-04T03:29:09Z
+dp_3_result: approved: 四模块分层重构 execution contract，main 分支 Batch Inline
+dp_3_timestamp: 2026-09-04T03:30:00Z
+dp_4_result: Batch Inline on main, no isolate
+dp_4_timestamp: 2026-09-04T03:30:00Z
+dp_5_result: null
+dp_5_timestamp: null
+dp_6_result: null
+dp_6_timestamp: null
+dp_7_result: null
+dp_7_timestamp: null
