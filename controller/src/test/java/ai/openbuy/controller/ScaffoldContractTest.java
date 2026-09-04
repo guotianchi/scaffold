@@ -35,4 +35,7 @@ class ScaffoldContractTest {
             assertTrue(yaml.contains("password:"));
         }
     }
+
+    void testpr() {
+    }
 }
