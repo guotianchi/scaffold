@@ -18,7 +18,7 @@ public class HelloController {
         return helloService.hello();
     }
 
-    public String testPr() {
-        return "testPr";
+    public String testPR() {
+        return "testProduct";
     }
 }
